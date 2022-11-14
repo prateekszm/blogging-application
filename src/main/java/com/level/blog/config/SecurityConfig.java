@@ -96,7 +96,7 @@ public class SecurityConfig {
 	        return configuration.getAuthenticationManager();
 	    }
 	  
-	  @Bean
+	  	@Bean
 	    public FilterRegistrationBean coresFilter() {
 	        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 

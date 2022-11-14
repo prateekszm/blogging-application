@@ -10,4 +10,5 @@ public interface CategoryService {
 	List<CategoryDto> getAllCategory();
 	CategoryDto updateCategory(CategoryDto categoryDto,Integer categoryId);	
 	void deleteCategory(Integer categoryId);
+	
 }

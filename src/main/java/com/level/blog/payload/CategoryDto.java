@@ -2,8 +2,8 @@ package com.level.blog.payload;
 
 public class CategoryDto {
 	private Integer categoryId;
-	private String Title;
-	private String Description;
+	private String title;
+	private String description;
 
 	public Integer getCategoryId() {
 		return categoryId;
@@ -14,19 +14,20 @@ public class CategoryDto {
 	}
 
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 
 	public void setTitle(String title) {
-		Title = title;
+		this.title = title;
 	}
 
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
+
 	
 }

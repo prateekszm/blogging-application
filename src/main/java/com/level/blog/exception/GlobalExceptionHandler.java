@@ -1,6 +1,5 @@
 package com.level.blog.exception;
 
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.HashMap;
 import java.util.Map;
 

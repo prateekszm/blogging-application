@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import javax.validation.constraints.Null;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,7 +12,6 @@ import org.springframework.stereotype.Service;
 import com.level.blog.config.AppConstants;
 import com.level.blog.entity.Role;
 import com.level.blog.entity.User;
-import com.level.blog.exception.ApiException;
 import com.level.blog.exception.ResourceNotFoundException;
 import com.level.blog.exception.SqlException;
 import com.level.blog.payload.UserDto;

@@ -9,7 +9,7 @@ public class SqlException extends RuntimeException {
 
 	public SqlException(String email) {
 		
-		super(String.format(" email dublicate entry", email));
+		super(String.format("%s ", email));
 		this.email = email;
 	}
 

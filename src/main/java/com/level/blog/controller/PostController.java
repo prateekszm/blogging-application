@@ -25,13 +25,15 @@ public class PostController {
 	@PostMapping("/user/{userId}/category/{categoryId}/posts")
 	ResponseEntity<PostDto> createPost(@RequestBody PostDto postDto, @PathVariable Integer userId,
 			@PathVariable Integer categoryId) {
+		System.out.println(userId + " " + categoryId);
 		return new ResponseEntity<>(this.postService.createPost(postDto, userId, categoryId), HttpStatus.CREATED);
 	}
 
 	@GetMapping("/getAllPost")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	ResponseEntity<List<PostDto>> getAllPost() {
-		return new ResponseEntity<>(this.postService.getAllposts(), HttpStatus.CREATED);
+		System.out.println("In getAllPost");
+		return new ResponseEntity<>(this.postService.getAllposts(), HttpStatus.OK);
 	}
 
 	@GetMapping("/{postId}")
