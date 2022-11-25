@@ -2,6 +2,7 @@ package com.level.blog.controller;
 
 import java.security.Principal;
 
+
 import javax.validation.Valid;
 
 import org.modelmapper.ModelMapper;
@@ -51,8 +52,6 @@ public class AuthController {
 	@PostMapping("/login")
 	public ResponseEntity<JwtAuthResponse> createToken(@RequestBody JwtAuthRequest request) throws Exception {
 		this.authenticate(request.getUsername(), request.getPassword());
-		System.out.println("I am in auth");
-		System.out.println(request.getUsername());
 		UserDetails userDetails = this.userDetailsService.loadUserByUsername(request.getUsername());
 		String token = this.jwtTokenHelper.generateToken(userDetails);
 		JwtAuthResponse response = new JwtAuthResponse();
